@@ -4,3 +4,5 @@
 /.project
 *.autosave
 *.asv
+*.slxc
+/slprj
