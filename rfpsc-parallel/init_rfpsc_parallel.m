@@ -24,7 +24,7 @@ alpha_c = 2*pi*400;     % Current-control bandwidth
 % Reference parameters
 E_p = 24.0;             % Reference grid voltage
 
-% PSC controller parameters
+% RFPSC controller parameters
 w_b = 0.1*w_g;          % Filter bandwidth
 R_a = 0.32;             % Active resistance
 K_p = 3*w_g*R_a/(2*u_gN^2); % Active power control gain
