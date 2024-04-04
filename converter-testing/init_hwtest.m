@@ -11,7 +11,7 @@ w_g = 2*pi*50;          % Grid angular frequency
 u_gN = 24;              % Nominal grid voltage (phase-to-neutral, peak value)
 
 % PWM and current controller
-f_sw = 20e3;             % Switching frequency
+f_sw = 10e3;             % Switching frequency
 T_s = 1/(2*f_sw);       % Sampling period
 alpha_c = 2*pi*400;     % Current-control bandwidth
 
