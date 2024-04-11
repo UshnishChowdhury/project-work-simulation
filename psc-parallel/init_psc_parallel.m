@@ -15,8 +15,8 @@ w0_pll = 2*pi*20;
 R_L = 10;               % Load resistance
 L_g = 2.5e-3;           % Grid inductance
 U_dc = 48;              % DC bus voltage
-R_m = 100e3             % V-pcc voltage divider resistor
-C_m = 0.033e-6          % V-pcc voltage divider capacitor
+Lfs = 2*pi*100;            % Low-pass filter
+
 % PWM and current controller
 f_sw = 10e3;            % Switching frequency
 T_s = 1/(2*f_sw);       % Sampling period
