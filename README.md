@@ -29,4 +29,7 @@ The repository is for the course ELEC-E8004 - Project Work
  - Extensions:
    - Connecting the setup to regatron for studying behavior.
    - Making a seperate inductor switching circuit to test the system with different inductance values.
-   - Testing the setup with one converter acting as the source, and the other acting as the load. 
+   - Testing the setup with one converter acting as the source, and the other acting as the load.
+   - Studying centralized grid control (may be Synchronous Power Control)??
+  
+ 
