@@ -12,7 +12,7 @@ C = 1e-3;               % DC-bus capacitance
 w_g = 2*pi*50;          % Grid angular frequency
 u_gN = 24;              % Nominal grid voltage (phase-to-neutral, peak value)
 w0_pll = 2*pi*20;
-R_L = 10;               % Load resistance
+R_L = 12;               % Load resistance
 L_g = 2.5e-3;           % Grid inductance
 U_dc = 48;              % DC bus voltage
 
