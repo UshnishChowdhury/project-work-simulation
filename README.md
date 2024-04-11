@@ -10,7 +10,7 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Simulating Reference Feedforward Power Synchronization Control (RFPSC) model.~~
   - ~~Discretization of theta value, using discrete highpass filter and lowpass filter, using a single memory block.~~
   - ~~Designing a lowpass filter for pcc voltage measurement.~~
-  - Pcc power measurement for plotting and comparison.
+  - Grid power measurement for plotting and comparison.
   - Generating MATLAB plots for the final report.
   - Implementing an overcurrent protection block onthe simulation models. 
   
@@ -22,8 +22,11 @@ The repository is for the course ELEC-E8004 - Project Work
   - Using a potentiometer for reference active power control.
  
 - Interface:
-  - Figuring out simulink blocks for interfacing with the microcontroller.
-  - Figuring out ADC pins for measurement.
+  - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
+  - ~~Figuring out ADC pins for measurement.~~
   - Scaling measured voltages and currents for feedback.
 
- - Extensions: 
+ - Extensions:
+   - Connecting the setup to regatron for studying behavior.
+   - Making a seperate inductor switching circuit to test the system with different inductance values.
+   - Testing the setup with one converter acting as the source, and the other acting as the load. 
