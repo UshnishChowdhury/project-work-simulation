@@ -12,19 +12,22 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Designing a lowpass filter for pcc voltage measurement.~~
   - Grid power measurement for plotting and comparison.
   - Generating MATLAB plots for the final report.
-  - Implementing an overcurrent protection block onthe simulation models. 
+  - Implementing an overcurrent protection block on the simulation models.
+  - Adding grid voltage into simulation models.
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
   - ~~Setting up parallel connection.~~
   - ~~Testing both converters.~~
   - ~~Making a voltage divider circuit to measure pcc voltage and have live plotting.~~
-  - Using a potentiometer for reference active power control.
+  - ~~Using a potentiometer for reference active power control.~~
+  - Adding a button for enabling/disabling inverter output and/or resetting software protection.
  
 - Interface:
   - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
   - ~~Figuring out ADC pins for measurement.~~
-  - Scaling measured voltages and currents for feedback.
+  - ~~Scaling measured voltages and currents for feedback.~~
+  - Importing measured data from Simulink for plotting.
 
  - Extensions:
    - Connecting the setup to regatron for studying behavior.
