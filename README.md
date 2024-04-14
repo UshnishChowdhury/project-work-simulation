@@ -14,6 +14,9 @@ The repository is for the course ELEC-E8004 - Project Work
   - Generating MATLAB plots for the final report.
   - Implementing an overcurrent protection block on the simulation models.
   - Adding grid voltage into simulation models.
+  - Checking the gains and parameters for PSC/RFPSC (for peak-value scaled space vectors, specifically K and kappa).
+  - Creating single simulation model where different control methods can be called via .m-files.
+  - Implementing software functionality to prevent integrator windup in the control.
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
@@ -22,6 +25,7 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Making a voltage divider circuit to measure pcc voltage and have live plotting.~~
   - ~~Using a potentiometer for reference active power control.~~
   - Adding a button for enabling/disabling inverter output and/or resetting software protection.
+  - Checking bi-directionality of converters, feeding one converter with another.
  
 - Interface:
   - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
