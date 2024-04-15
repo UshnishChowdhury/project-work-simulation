@@ -10,13 +10,13 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Simulating Reference Feedforward Power Synchronization Control (RFPSC) model.~~
   - ~~Discretization of theta value, using discrete highpass filter and lowpass filter, using a single memory block.~~
   - ~~Designing a lowpass filter for pcc voltage measurement.~~
+  - ~~Implementing an overcurrent protection block on the simulation models.~~
+  - ~~Checking the gains and parameters for PSC/RFPSC (for peak-value scaled space vectors, specifically K and kappa).~~
+  - ~~Implementing software functionality to prevent integrator windup in the control.~~
   - Grid power measurement for plotting and comparison.
   - Generating MATLAB plots for the final report.
-  - Implementing an overcurrent protection block on the simulation models.
   - Adding grid voltage into simulation models.
-  - Checking the gains and parameters for PSC/RFPSC (for peak-value scaled space vectors, specifically K and kappa).
   - Creating single simulation model where different control methods can be called via .m-files.
-  - Implementing software functionality to prevent integrator windup in the control.
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
