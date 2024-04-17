@@ -9,7 +9,7 @@ P = kpp*real(u_c_ref*conj(i_c));
 w_g = (P_ref - P)*K_p + w_1;
 
 % Update (integrate) the grid voltage angle
-theta_next = theta + 1.5 * T_s * w_g; % Discrete time compensation
+theta_next = theta + T_s * w_g; % Discrete time compensation
 
 %Limiting theta value -pi <= theta <= pi
 if(theta_next > pi)
@@ -31,4 +31,4 @@ i_c_imag_filt_next =  i_c_filt_imag*(1 - w_b*T_s) + i_c_imag*(w_b*T_s);
 u_c = V - ((i_c_real - i_c_real_filt_next) + 1j*(i_c_imag - i_c_imag_filt_next)) * R_a;
 
 % Inverse coordinate transformation
-u_cs = u_c*exp(1j*theta_next);
+u_cs = u_c*exp(1j*(theta + T_s * w_1));
