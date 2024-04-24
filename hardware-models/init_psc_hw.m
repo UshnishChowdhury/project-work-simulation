@@ -33,6 +33,8 @@ E_p = 24.0;             % Reference grid voltage
 % PSC/RFPSC controller parameters
 w_b = 0.1*w_g;          % Filter bandwidth
 R_a = 0.32;             % Active resistance
-K = 1; % Space vector scaling constant
-kpp = 3/2 * K^(-2); % Peak value vector scaling
+K = 1;                  % Space vector scaling constant
+kpp = 3/2 * K^(-2);     % Peak value vector scaling
 K_p = 3*w_g*R_a/(2*u_gN^2*kpp); % Active power control gain
+
+I_max = 5;              % Current limit for software overcurrent protection
