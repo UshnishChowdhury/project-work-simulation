@@ -5,7 +5,7 @@ close all;              % Close all figures
 
 %% Controller parameters
 % System parameters
-L_f = 1e-3;            % Inductance of the filter inductor
+L_f = 10e-3;            % Inductance of the filter inductor
 L_f1 = L_f;
 L_f2 = L_f;
 C = 1e-3;               % DC-bus capacitance
