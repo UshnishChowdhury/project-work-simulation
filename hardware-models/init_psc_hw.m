@@ -17,7 +17,7 @@ L_g = 2.5e-3;           % Grid inductance
 U_dc = 48;              % DC bus voltage
 
 % PWM and current controller
-f_sw = 10e3;            % Switching frequency
+f_sw = 5e3;            % Switching frequency
 T_s = 1/(2*f_sw);       % Sampling period
 alpha_c = 2*pi*400;     % Current-control bandwidth
 
@@ -38,3 +38,5 @@ kpp = 3/2 * K^(-2);     % Peak value vector scaling
 K_p = 3*w_g*R_a/(2*u_gN^2*kpp); % Active power control gain
 
 I_max = 5;              % Current limit for software overcurrent protection
+
+n=600;                  % Number of data points (samples) in one packet
