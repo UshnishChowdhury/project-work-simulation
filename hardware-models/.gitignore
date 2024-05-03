@@ -10,3 +10,4 @@
 *.dwo
 *.hex
 *.out
+*.backup
