@@ -27,7 +27,7 @@ E_p = 24.0;             % Reference grid voltage
 
 % PSC controller parameters
 w_b = 0.1*w_g;          % Filter bandwidth
-R_a = 0.5;             % Active resistance
+R_a = 0.6;             % Active resistance
 %R_a = 0;
 
 K = 1;                  % Space vector scaling constant
