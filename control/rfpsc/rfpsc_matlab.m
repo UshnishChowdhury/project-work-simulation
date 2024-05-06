@@ -6,10 +6,9 @@ w_g = (P_ref - P)*K_p + w_1;
 
 % Update (integrate) the grid voltage angle
 theta_next = theta + T_s * w_g;
-while(theta_next > pi)
+if(theta_next > pi)
     theta_next = theta_next - 2*pi;
-end
-while(theta_next < -pi)
+elseif(theta_next < -pi)
     theta_next = theta_next + 2*pi;
 end
 
@@ -20,7 +19,11 @@ i_c_imag = imag(i_c);
 % converter current and forming reference current based on power reference
 i_c_filt_next =  i_c_filt*(1 - w_b*T_s) + i_c_imag*(w_b*T_s);
 
-i_ref = P_ref/(V*kpp) + 1j*i_c_filt_next;
+if(V == 0 || kpp == 0)
+    i_ref = i_c;
+else    
+    i_ref = P_ref/(V*kpp) + 1j*i_c_filt_next;
+end    
 
 % Equation for reference voltage
 u_c = V + (i_ref-i_c) * R_a;

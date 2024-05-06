@@ -5,13 +5,12 @@ P = kpp*real(u_c_ref*conj(i_c));
 w_g = (P_ref - P)*K_p + w_1;
 
 % Update (integrate) the grid voltage angle
-theta_next = theta + T_s * w_g;
+theta_next = theta + T_s * w_g; 
 
 %Limiting theta value -pi <= theta <= pi
-while(theta_next > pi)
+if(theta_next > pi)
     theta_next = theta_next - 2*pi;
-end
-while(theta_next < -pi)
+elseif(theta_next < -pi)
     theta_next = theta_next + 2*pi;
 end
 
