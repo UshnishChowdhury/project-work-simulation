@@ -34,7 +34,7 @@ K = 1;                  % Space vector scaling constant
 kpp = 3/2 * K^(-2);     % Peak value vector scaling
 K_p = 3*w_N*R_a/(2*u_gN^2*kpp); % Active power control gain
 
-I_max = 7;              % Current limit for software overcurrent protection
+I_max = 10;              % Current limit for software overcurrent protection
 U_dcmin = 35;           % Minimum DC voltage
 
 n=300;                  % Number of data points (samples) in one packet

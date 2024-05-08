@@ -8,12 +8,12 @@
 % converter 1
 i_c1_d = real(i_c1.data);
 i_c1_q = imag(i_c1.data);
-p_c1 = 3/2*(u_c1.data .* i_c1_d);
-q_c1 = -3/2*(u_c1.data .* i_c1_q);
+% p_c1 = 3/2*(u_c1.data .* i_c1_d);
+% q_c1 = -3/2*(u_c1.data .* i_c1_q);
 
 % % converter 2
-% i_c2_d = real(i_c2.data);
-% i_c2_q = imag(i_c2.data);
+i_c2_d = real(i_c2.data);
+i_c2_q = imag(i_c2.data);
 % p_c2 = 3/2*(u_c2.data .* i_c2_d);
 % q_c2 = -3/2*(u_c2.data .* i_c2_q);
 
@@ -31,58 +31,59 @@ q_c1 = -3/2*(u_c1.data .* i_c1_q);
 % PCC current
 subplot(4,1,1)
 grid on;
+hold on
 plot(i_g_abc.time, i_g_abc.data(:,1), 'r');
 plot(i_g_abc.time, i_g_abc.data(:,2), 'g');
 plot(i_g_abc.time, i_g_abc.data(:,3), 'b');
 ylabel('Converter current (A)');
 xlabel('Time (s)');
-legend('1', '2', 'Location','SouthEast');
+legend('i_g^a', 'Phase B', 'Phase C', 'Location','SouthEast');
 
-% Converter 1 power
-subplot(4,1,2)
-hold on;
-plot(i_c1_q.time, p_g);
-plot(i_c1.time, q_g);
-plot(p_c1_ref.time, p_c1_ref.data, '--');
-plot(q_c1_ref.time, q_c1_ref.data, '--');
-grid on;
-ylabel('Power (kW)');
-xlabel('Time (s)');
-legend('1', '2', 'Location','SouthEast');
-hold off;
-
-% % Converter 2 power
-% subplot(3,3,4)
+% % Converter 1 power
+% subplot(4,1,2)
 % hold on;
-% plot(i_c2.time, p_g);
-% plot(i_c2.time, q_g);
-% plot(p_c2_ref.time, p_c2_ref.data, '--');
-% plot(q_c2_ref.time, q_c2_ref.data, '--');
+% plot(p_g.time, p_g.data);
+% plot(q_g.time, q_g.data);
+% plot(p_ref1.time, p_ref1.data, '--');
+% plot(q_ref1.time, q_ref2.data, '--');
 % grid on;
 % ylabel('Power (kW)');
 % xlabel('Time (s)');
 % legend('1', '2', 'Location','SouthEast');
 % hold off;
 
-% Converter 1 current
-subplot(4,1,3)
-hold on; grid on;
-plot(i_c1.time, i_c1d);
-plot(i_c1.time, i_c1q);
-ylabel('Converter current (A)');
+% Converter 2 power
+subplot(4,1,2)
+hold on;
+plot(p_c2.time, p_c2.data, 'b');
+plot(q_c2.time, q_c2.data, 'r');
+plot(p_ref2.time, p_ref2.data, 'lineStyle', '--', 'Color', 'b');
+plot(q_ref2.time, q_ref2.data, 'lineStyle', '--', 'Color', 'r');
+grid on;
+ylabel('Power (kW)');
 xlabel('Time (s)');
 legend('1', '2', 'Location','SouthEast');
 hold off;
 
-% % Converter 2 current
-% subplot(3,3,6)
+% % Converter 1 current
+% subplot(4,1,3)
 % hold on; grid on;
-% plot(i_c2.time, i_c2d);
-% plot(i_c2.time, i_c2q);
+% plot(i_c1.time, i_c1_d);
+% plot(i_c1.time, i_c1_q);
 % ylabel('Converter current (A)');
 % xlabel('Time (s)');
 % legend('1', '2', 'Location','SouthEast');
 % hold off;
+
+% Converter 2 current
+subplot(4,1,3)
+hold on; grid on;
+plot(i_c2.time, i_c2_d);
+plot(i_c2.time, i_c2_q);
+ylabel('Converter current (A)');
+xlabel('Time (s)');
+legend('1', '2', 'Location','SouthEast');
+hold off;
 
 % % Power angle
 % subplot(3,3,7)
@@ -98,11 +99,13 @@ hold off;
 % Converter and grid voltage magnitudes
 subplot(4,1,4)
 hold on;
-plot(u_pcc.time, abs(u_pcc.data));
-plot(u_c1.time, abs(u_c1.data));
-plot(u_c2.time, abs(u_c2.data));
+plot(u_pcc_abc.time, u_pcc_abc.data(:,1), 'r');
+plot(u_pcc_abc.time, u_pcc_abc.data(:,2), 'g');
+plot(u_pcc_abc.time, u_pcc_abc.data(:,3), 'b');
+% plot(u_c1.time, abs(u_c1.data));
+% plot(u_c2.time, abs(u_c2.data));
 grid on;
-ylabel('Converter voltage (V)');
+ylabel('PCC voltage (V)');
 xlabel('Time (s)');
 legend('1', '2', 'Location','SouthEast');
 hold off;
