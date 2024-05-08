@@ -2,6 +2,7 @@
 %load testdata_serial_1.mat; % Data should be for converter 1
 %load testdata_serial_2.mat; % Data should be for converter 2
 %load testdata_analyzer.txt; % PCC current?
+load RFPSC_parallel_sim_plot.mat
 
 %% Calculations:
 

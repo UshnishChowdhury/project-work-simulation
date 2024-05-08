@@ -17,7 +17,7 @@ R_L = 20.2;               % Load resistance
 L_g = 2.5e-3;           % Grid inductance
 U_dc = 48;              % DC bus voltage
 Lfs = 2*pi*100;         % Low-pass filter
-R_f = 0.1;              % Filter resistance
+R_f = 0.3;              % Filter resistance
 R_f1 = R_f;
 R_f2 = R_f;
 

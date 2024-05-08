@@ -37,4 +37,5 @@ K_p = 3*w_N*R_a/(2*u_gN^2*kpp); % Active power control gain
 I_max = 10;              % Current limit for software overcurrent protection
 U_dcmin = 35;           % Minimum DC voltage
 
-n=300;                  % Number of data points (samples) in one packet
+n=500;                  % Number of data points (samples) in one packet
+port='COM4';            % COM port for serial communication
