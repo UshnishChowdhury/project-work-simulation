@@ -6,7 +6,7 @@
 
 clear
 clc
-load rfpsc_parallel.mat
+load rfpsc.mat
 
 %% Base values
 
@@ -102,20 +102,20 @@ end
 
 % % plotting time variables
 
-start1 = 175.55;
-end1 = 175.70;
+start1 = 36.35;
+end1 = 36.45;
 
-start2 = 176.35;
-end2 = 176.50;
+start2 = 41.1;
+end2 = 41.2;
 
-start3 = 180.3;
-end3 = 180.45;
+start3 = 51.5;
+end3 = 51.6;
 
 int1 = [start1 end1];
 int2 = [start2 end2];
 int3 = [start3 end3];
 time = i_c2.time;
-time2 = p_c2_ref.time;
+time2 = time + 0.895;
 ticks1 = start1:0.05:end1;
 ticks2 = start2:0.05:end2;
 ticks3 = start3:0.05:end3;
@@ -133,8 +133,8 @@ hold(ax1, "on")
 grid(ax1, "on")
 plot(ax1, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax1, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
-plot(ax1, time2, (p_c2_ref_fixed)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax1, time2, (q_c2_ref_fixed)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax1, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax1, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax1, "off")
 xticks(ax1, ticks1)
 ax1.Box = 'off';
@@ -146,8 +146,8 @@ hold(ax2, "on")
 grid(ax2, "on")
 plot(ax2, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax2, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
-plot(ax2, time2, (p_c2_ref_fixed)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax2, time2, (q_c2_ref_fixed)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax2, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax2, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax2, "off")
 xticks(ax2, ticks2)
 ax2.YAxis.Visible = 'off';
@@ -160,8 +160,8 @@ hold(ax3, "on")
 grid(ax3, "on")
 plot(ax3, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax3, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
-plot(ax3, time2, (p_c2_ref_fixed)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax3, time2, (q_c2_ref_fixed)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax3, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax3, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax3, "off")
 xticks(ax3, ticks3)
 legend(ax3, '$p_c$', '$q_c$', '$p_{c,ref}$', '$q_{c,ref}$', 'Location', 'eastoutside', 'Interpreter', 'latex', 'FontSize', 11)
