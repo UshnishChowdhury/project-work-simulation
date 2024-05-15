@@ -6,7 +6,7 @@
 
 clear
 clc
-load rfpsc.mat
+load rfpsc_parallel_hwtrigger_c1.mat
 
 %% Base values
 
@@ -47,8 +47,8 @@ for n = 1:length(i_c2.data)
     u_pcc_c(n) = real(u_pcc.data(n) * exp(-1j*4*pi/3));
 end
 
-p_c2 = 3/2*real((u_c2.data .* conj(i_c2.data)));
-q_c2 = 3/2*imag((u_c2.data .* conj(i_c2.data)));
+% p_c2 = 3/2*real((u_c2.data .* conj(i_c2.data)));
+% q_c2 = 3/2*imag((u_c2.data .* conj(i_c2.data)));
 
 
 % set p_ref and q_ref to 0 when PSC is not enabled
@@ -102,23 +102,23 @@ end
 
 % % plotting time variables
 
-start1 = 36.35;
-end1 = 36.45;
+start1 = 22.5;
+end1 = start1 + 0.3;
 
-start2 = 41.1;
-end2 = 41.2;
+start2 = 27.1;
+end2 = start2 + 0.3;
 
-start3 = 51.5;
-end3 = 51.6;
+start3 = 35.2;
+end3 = start3 + 0.3;
 
 int1 = [start1 end1];
 int2 = [start2 end2];
 int3 = [start3 end3];
 time = i_c2.time;
-time2 = time + 0.895;
-ticks1 = start1:0.05:end1;
-ticks2 = start2:0.05:end2;
-ticks3 = start3:0.05:end3;
+time2 = time + 0.35;
+ticks1 = start1:0.1:end1;
+ticks2 = start2:0.1:end2;
+ticks3 = start3:0.1:end3;
 
 
 t = tiledlayout(3,3,'TileSpacing','compact');
@@ -131,8 +131,8 @@ ax1 = axes(t);
 ax1.Layout.Tile = 1;
 hold(ax1, "on")
 grid(ax1, "on")
-plot(ax1, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
-plot(ax1, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
+plot(ax1, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
+% plot(ax1, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax1, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
 plot(ax1, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax1, "off")
@@ -144,8 +144,8 @@ ax2 = axes(t);
 ax2.Layout.Tile = 2;
 hold(ax2, "on")
 grid(ax2, "on")
-plot(ax2, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
-plot(ax2, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
+plot(ax2, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
+% plot(ax2, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax2, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
 plot(ax2, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax2, "off")
@@ -158,8 +158,8 @@ ax3 = axes(t);
 ax3.Layout.Tile = 3;
 hold(ax3, "on")
 grid(ax3, "on")
-plot(ax3, time, (p_c2)./s_N, 'Color', 'b', 'LineWidth', 1.2)
-plot(ax3, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
+plot(ax3, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
+% plot(ax3, time, (q_c2)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax3, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
 plot(ax3, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax3, "off")
@@ -234,7 +234,7 @@ ax6.YAxis.Visible = 'off';
 ax6.Box = 'off';
 xlim(ax6,int3)
 % ylabel(ax4, 'Current (p.u.)')
-ylabel(ax4, 'Voltage (p.u.)')
+ylabel(ax4, 'Current (p.u.)')
 
 % Link the axes
 %linkaxes([ax4 ax6], 'y')
