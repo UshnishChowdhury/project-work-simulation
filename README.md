@@ -13,10 +13,10 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Implementing an overcurrent protection block on the simulation models.~~
   - ~~Checking the gains and parameters for PSC/RFPSC (for peak-value scaled space vectors, specifically K and kappa).~~
   - ~~Implementing software functionality to prevent integrator windup in the control.~~
-  - Grid power measurement for plotting and comparison.
-  - Generating MATLAB plots for the final report.
-  - Adding grid voltage into simulation models.
-  - Creating single simulation model where different control methods can be called via .m-files.
+  - ~~Grid power measurement for plotting and comparison.~~
+  - ~~Generating MATLAB plots for the final report.~~
+  - Fix parallel simultion PCC voltage equation
+  - GFL simulation
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
@@ -24,16 +24,21 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Testing both converters.~~
   - ~~Making a voltage divider circuit to measure pcc voltage and have live plotting.~~
   - ~~Using a potentiometer for reference active power control.~~
-  - Adding a button for enabling/disabling inverter output and/or resetting software protection.
+  - ~~Adding a button for enabling/disabling inverter output and/or resetting software protection.~~
   - Checking bi-directionality of converters, feeding one converter with another.
+  - GFL hw model
  
 - Interface:
   - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
   - ~~Figuring out ADC pins for measurement.~~
   - ~~Scaling measured voltages and currents for feedback.~~
-  - Importing measured data from Simulink for plotting.
+  - ~~Importing measured data from Simulink for plotting.~~
+ 
+- Final report/gala:
+  - Getting results from different scenarios (simulation and hw)
 
  - Extensions:
+   - Adding grid voltage into simulation models.
    - Connecting the setup to regatron for studying behavior.
    - Making a seperate inductor switching circuit to test the system with different inductance values.
    - Testing the setup with one converter acting as the source, and the other acting as the load.
