@@ -15,8 +15,11 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Implementing software functionality to prevent integrator windup in the control.~~
   - ~~Grid power measurement for plotting and comparison.~~
   - ~~Generating MATLAB plots for the final report.~~
-  - Fix parallel simultion PCC voltage equation
-  - GFL simulation
+  - ~~Fix parallel simultion PCC voltage equation~~
+  - ~~GFL simulation~~
+  - PSC simulation
+  - Simulation results for final report
+  - Cleaning up of simulation models
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
@@ -25,8 +28,9 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Making a voltage divider circuit to measure pcc voltage and have live plotting.~~
   - ~~Using a potentiometer for reference active power control.~~
   - ~~Adding a button for enabling/disabling inverter output and/or resetting software protection.~~
-  - Checking bi-directionality of converters, feeding one converter with another.
-  - GFL hw model
+  - ~~Checking bi-directionality of converters, feeding one converter with another.~~
+  - ~~GFL hw model~~
+  - Cleaning up of hw models
  
 - Interface:
   - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
@@ -35,11 +39,15 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Importing measured data from Simulink for plotting.~~
  
 - Final report/gala:
-  - Getting results from different scenarios (simulation and hw)
+  - ~~Getting results from different scenarios (simulation and hw)~~
+ 
+- Misc:
+  - Pushing all lates files to repo and cleaning up old files
 
  - Extensions:
    - Adding grid voltage into simulation models.
-   - Connecting the setup to regatron for studying behavior.
+   - ~~Connecting the setup to regatron for studying behavior.~~
+   - More test scenarios with regatron
    - Making a seperate inductor switching circuit to test the system with different inductance values.
    - Testing the setup with one converter acting as the source, and the other acting as the load.
    - Studying centralized grid control (may be Synchronous Power Control)??
