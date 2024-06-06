@@ -13,11 +13,11 @@ w_g = 2*pi*50;          % Grid angular frequency
 w_N = 2*pi*50; 
 u_gN = 24;              % Nominal grid voltage (phase-to-neutral, peak value)
 w0_pll = 2*pi*20;
-R_L = 20.2;               % Load resistance
+R_L = 10.136;           % Grid inductance + load resistance
 L_g = 2.5e-3;           % Grid inductance
 U_dc = 48;              % DC bus voltage
 Lfs = 2*pi*100;         % Low-pass filter
-R_f = 0.3;              % Filter resistance
+R_f = 0.156;            % Filter resistance
 R_f1 = R_f;
 R_f2 = R_f;
 
@@ -31,7 +31,7 @@ E_p = 24.0;             % Reference grid voltage
 
 % PSC controller parameters
 w_b = 0.1*w_g;          % Filter bandwidth
-R_a = 0.6;              % Active resistance
+R_a = 0.32;              % Active resistance
 %R_a = 0;
 
 K = 1;                  % Space vector scaling constant
