@@ -17,9 +17,9 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Generating MATLAB plots for the final report.~~
   - ~~Fix parallel simultion PCC voltage equation~~
   - ~~GFL simulation~~
-  - PSC simulation
-  - Simulation results for final report
-  - Cleaning up of simulation models
+  - ~~PSC simulation~~
+  - ~~Simulation results for final report~~
+  - ~~Cleaning up of simulation models~~
   
 - Hardware:
   - ~~Setting up the initial setup (connecting the filter inductances, grid inductances and passive load resistances to converter, microcontroller and DC supply).~~
@@ -30,7 +30,7 @@ The repository is for the course ELEC-E8004 - Project Work
   - ~~Adding a button for enabling/disabling inverter output and/or resetting software protection.~~
   - ~~Checking bi-directionality of converters, feeding one converter with another.~~
   - ~~GFL hw model~~
-  - Cleaning up of hw models
+  - ~~Cleaning up of hw models~~
  
 - Interface:
   - ~~Figuring out simulink blocks for interfacing with the microcontroller.~~
@@ -40,13 +40,14 @@ The repository is for the course ELEC-E8004 - Project Work
  
 - Final report/gala:
   - ~~Getting results from different scenarios (simulation and hw)~~
-  - Schematic of microcontroller/inverter wiring, including PCC voltage measurement
+  - ~~Schematic of microcontroller/inverter wiring, including PCC voltage measurement~~
+  - Reviewing the final report document.
  
 - Misc:
-  - Pushing all lates files to repo and cleaning up old files
+  - ~~Pushing all lates files to repo and cleaning up old files~~
 
  - Extensions:
-   - Adding grid voltage into simulation models.
+   - Adding grid voltage into simulation models (added to single converter simulations).
    - ~~Connecting the setup to regatron for studying behavior.~~
    - More test scenarios with regatron
    - Making a seperate inductor switching circuit to test the system with different inductance values.
