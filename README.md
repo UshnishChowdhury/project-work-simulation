@@ -41,7 +41,7 @@ The repository is for the course ELEC-E8004 - Project Work
 - Final report/gala:
   - ~~Getting results from different scenarios (simulation and hw)~~
   - ~~Schematic of microcontroller/inverter wiring, including PCC voltage measurement~~
-  - Reviewing the final report document.
+  - ~~Reviewing the final report document~~.
  
 - Misc:
   - ~~Pushing all lates files to repo and cleaning up old files~~
