@@ -8,7 +8,6 @@ close all;              % Close all figures
 L_f = 1e-3;            % Inductance of the filter inductor
 L_f1 = L_f;
 L_f2 = L_f;
-C = 1e-3;               % DC-bus capacitance
 w_N = 2*pi*50;          % Grid angular frequency
 u_gN = 24;              % Nominal grid voltage (phase-to-neutral, peak value)
 w0_pll = 2*pi*20;
@@ -38,4 +37,5 @@ I_max = 10;              % Current limit for software overcurrent protection
 U_dcmin = 35;           % Minimum DC voltage
 
 n=500;                  % Number of data points (samples) in one packet
+
 port='COM4';            % COM port for serial communication
