@@ -6,7 +6,7 @@
 
 clear
 clc
-load rfpsc.mat
+load rfpsc-overcurrent.mat
 
 %% Base values
 
@@ -102,16 +102,16 @@ end
 
 % % plotting time variables
 
-start1 = 14.56;
+start1 = 17.8;
 end1 = start1 + 0.1;
 
-start2 = 19.28;
+start2 = 22.55;
 end2 = start2 + 0.1;
 
-start3 = 25.8;
+start3 = 29.05;
 end3 = start3 + 0.1;
 
-start4 = 29.64;
+start4 = 32.85;
 end4 = start4 + 0.1;
 
 int1 = [start1 end1];
@@ -119,7 +119,8 @@ int2 = [start2 end2];
 int3 = [start3 end3];
 int4 = [start4 end4];
 time = i_c2.time;
-time2 = time + 0.35;
+time2 = time + 1.28;
+time3 = time2 + 0.06 + 0.007;
 ticks1 = start1:0.1:end1;
 ticks2 = start2:0.1:end2;
 ticks3 = start3:0.1:end3;
@@ -139,7 +140,7 @@ grid(ax1, "on")
 plot(ax1, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax1, time, (q_c2.data)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax1, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax1, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax1, time3, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax1, "off")
 xticks(ax1, ticks1)
 ax1.Box = 'off';
@@ -152,7 +153,7 @@ grid(ax2, "on")
 plot(ax2, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax2, time, (q_c2.data)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax2, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax2, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax2, time3, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax2, "off")
 xticks(ax2, ticks2)
 ax2.YAxis.Visible = 'off';
@@ -166,7 +167,7 @@ grid(ax3, "on")
 plot(ax3, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax3, time, (q_c2.data)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax3, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax3, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax3, time3, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax3, "off")
 xticks(ax3, ticks3)
 ax3.YAxis.Visible = 'off';
@@ -181,7 +182,7 @@ grid(ax4, "on")
 plot(ax4, time, (p_c2.data)./s_N, 'Color', 'b', 'LineWidth', 1.2)
 plot(ax4, time, (q_c2.data)./s_N, 'Color', 'r', 'LineWidth', 1.2)
 plot(ax4, time2, double(p_c2_ref.data)./s_N, 'Color', [0 0.6 0], 'LineStyle','--', 'LineWidth', 1.2)
-plot(ax4, time2, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
+plot(ax4, time3, double(q_c2_ref.data)./s_N, 'Color', [0 0.8 0.8], 'LineStyle','--', 'LineWidth', 1.2)
 hold(ax4, "off")
 xticks(ax4, ticks4)
 ax4.YAxis.Visible = 'off';
@@ -384,3 +385,5 @@ linkaxes([ax9 ax10 ax11 ax12], 'y')
 % xlabel('Time (s)');
 % legend('u_g^a', 'u_g^b', 'u_g^c', 'Location','SouthEast');
 % hold off;
+
+plot(i_c2.time, real(i_c2.data));
