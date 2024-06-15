@@ -1,6 +1,14 @@
 # E8004 - Project Work - EPEE-06 A small scale lab setup for investigating grid converter control
 The repository is for the course ELEC-E8004 - Project Work
 
+# Abstract
+
+Grid-connected converters play an increasingly important role in modern power systems. Understanding their operation is important for renewable energy integration and attaining carbon-free electricity generation. The project aimed to participate in this endeavour by assembling a small-scale, low voltage test setup consisting of two converters connected in parallel. State-of-the-art control methods, chosen according to the hardware configuration, were implemented to examine the system's performance in different grid conditions. 
+
+The project began with the formulation of a circuit diagram, based on which simulation models were subsequently developed. Then, a hardware setup was assembled, comprising components like a DC power supply, filter inductors, circuit breakers for overcurrent protection and passive resistive loads. The converters, combined with microcontrollers, act as the central control unit for the system. Software versions of the control methods were developed in MATLAB/Simulink and uploaded to the microcontrollers, which then control the converters. Real-time measurements were obtained from the setup through serial communication between the host machine and the microcontrollers. 
+
+Control methods for grid-connected converters can be classified into grid-following (GFL) and grid-forming (GFM). Given the utilization of L-filters in the setup, suitable control methods from both categories were chosen and deployed to the converter units, to study how they operate when connected in parallel. Experimental results were obtained, showcasing the characteristics of different control methods during connection to an existing grid, power reference tracking, islanded mode operation, and common grid faults such as grid voltage drops and frequency fluctuations.
+
 # To do List:
 - Software:
   - ~~Simulating the basic model using "Control of Electric Drives and Power Converters Course" assignment-2 as reference.~~
